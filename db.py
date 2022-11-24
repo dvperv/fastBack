@@ -5,6 +5,7 @@ Base = declarative_base()
 
 engine = create_engine("postgresql://postgres:postgrespw@localhost:55000", echo=True, future=True)
 
+
 class Foo(Base):
     __tablename__ = "foo"
 
@@ -13,6 +14,7 @@ class Foo(Base):
 
     def __repr__(self):
         return f"Foo(id={self.id!r}, name={self.name!r})"
+
 
 GENERATE_SCHEMA = False
 
